@@ -35,7 +35,6 @@ class CKEditor5 extends EditorBase {
   public function getLibraries(Editor $editor) {
     return [
       'd8ck5/d8ck5.cdn',
-      'd8ck5/d8ck5.ckeditor',
     ];
   }
 

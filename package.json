@@ -1,0 +1,34 @@
+{
+  "name": "d8ck5",
+  "version": "1.0.0",
+  "description": "Collaborative CkEditor v5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joel-travieso/d8ck5.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joel-travieso/d8ck5/issues"
+  },
+  "homepage": "https://github.com/joel-travieso/d8ck5#readme",
+  "dependencies": {
+    "@ckeditor/ckeditor5-basic-styles": "^10.0.3",
+    "@ckeditor/ckeditor5-collaboration": "^11.0.0",
+    "@ckeditor/ckeditor5-dev-utils": "^11.0.1",
+    "@ckeditor/ckeditor5-easy-image": "^10.0.3",
+    "@ckeditor/ckeditor5-editor-classic": "^11.0.1",
+    "@ckeditor/ckeditor5-essentials": "^10.1.2",
+    "@ckeditor/ckeditor5-paragraph": "^10.0.3",
+    "@ckeditor/ckeditor5-theme-lark": "^11.1.0",
+    "postcss-loader": "^3.0.0",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
+  }
+}

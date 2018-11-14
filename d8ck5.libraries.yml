@@ -1,13 +1,6 @@
 d8ck5.cdn:
   js:
-    https://cdn.ckeditor.com/ckeditor5/11.1.1/classic/ckeditor.js: { type: external, minified: true}
-
-d8ck5.ckeditor:
-  js:
-    js/ckeditor.js: {}
+    dist/bundle.js: {}
   css:
     state:
       css/ckeditor.css: {}
-  dependencies:
-    # Ensure to run after d8ck5/d8ck5.cdn.
-    - d8ck5/d8ck5.cdn
