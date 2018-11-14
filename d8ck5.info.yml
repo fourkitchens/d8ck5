@@ -1,0 +1,6 @@
+name: CKEditor 5
+type: module
+description: Enable CKEditor 5 text editor
+core: 8.x
+dependencies:
+  - drupal:editor

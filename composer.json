@@ -1,0 +1,7 @@
+{
+    "name": "drupal/d8ck5",
+    "description": "Enables CKeditor v5 editor.",
+    "type": "drupal-module",
+    "license": "GPL-2.0+"
+}
+
