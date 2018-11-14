@@ -30,7 +30,7 @@ import CollaborativeEditing from '@ckeditor/ckeditor5-collaboration/src/collabor
             webSocketUrl: '35834.cke-cs.com/ws',
             documentId: 'collabEditing4'
         },
-        toolbar: [ 'bold', 'italic', 'imageUpload' ]
+        toolbar: [ 'bold', 'italic', '|', 'undo', 'redo', '|', 'imageUpload' ]
     } ).then( 
           editor => {
             console.log( editor );
