@@ -9,7 +9,6 @@
 
   Drupal.behaviors.ckeditor5Create = {
     attach: function (context) {
-      console.log('Creating CKEditor v5...');
 
       ClassicEditor.create(
        document.querySelector('[data-editor-active-text-format=basic_html]') 
@@ -23,7 +22,6 @@
             } 
           );
 
-      console.log('Finished attaching CKEditor v5.');
     }
   };
 })(jQuery, Drupal);
