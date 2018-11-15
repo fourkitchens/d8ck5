@@ -9,6 +9,7 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import EasyImageUpload from '@ckeditor/ckeditor5-easy-image/src/easyimage';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 
 import CollaborativeEditing from '@ckeditor/ckeditor5-collaboration/src/collaborativeediting';
 
@@ -22,15 +23,15 @@ import CollaborativeEditing from '@ckeditor/ckeditor5-collaboration/src/collabor
 
       ClassicEditor.create(
        document.querySelector('[data-editor-active-text-format=basic_html]'), {
-        plugins: [ Essentials, Paragraph, Bold, Italic, CollaborativeEditing, EasyImageUpload ],
+        plugins: [ Essentials, Paragraph, Bold, Italic, CollaborativeEditing, EasyImageUpload, Alignment ],
         cloudServices: {
             // From account in ckeditor.com
             tokenUrl: 'https://35834.cke-cs.com/token/dev/rCIlirmnPfSErxaZFY8H53BZldrqsWi49ReQZuPa2GumwzFzn0zgePGhD7n3',
             uploadUrl: 'https://35834.cke-cs.com/easyimage/upload/',
             webSocketUrl: '35834.cke-cs.com/ws',
-            documentId: 'collabEditing4'
+            documentId: 'node-2'
         },
-        toolbar: [ 'bold', 'italic', '|', 'undo', 'redo', '|', 'imageUpload' ]
+        toolbar: [ 'bold', 'italic', '|', 'undo', 'redo', '|', 'imageUpload', '|', 'alignment:right', 'alignment:left' ]
     } ).then( 
           editor => {
             console.log( editor );
