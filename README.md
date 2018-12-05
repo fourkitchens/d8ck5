@@ -2,6 +2,16 @@
 Drupal module that exposes a basic version of CKEditor v5
 
 ## Installation
+- Open your project's `composer.json` and include the following:
+```
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/joel-travieso/d8ck5"
+        }
+    ]
+```
+- `composer require joel-travieso/d8ck5:dev-master`
 - Move to the module folder
 - `npm install --save`
 - `./node_modules/.bin/webpack --mode development` (also necessary everytime `js/ckeditor.js` is modified)
