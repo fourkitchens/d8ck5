@@ -20,27 +20,34 @@ import CollaborativeEditing from '@ckeditor/ckeditor5-collaboration/src/collabor
 
   Drupal.behaviors.ckeditor5Create = {
     attach: function (context) {
-
-      ClassicEditor.create(
-       document.querySelector('[data-editor-active-text-format=basic_html]'), {
-        plugins: [ Essentials, Paragraph, Bold, Italic, CollaborativeEditing, EasyImageUpload, Alignment ],
-        cloudServices: {
-            // From account in ckeditor.com
-            tokenUrl: 'https://35834.cke-cs.com/token/dev/rCIlirmnPfSErxaZFY8H53BZldrqsWi49ReQZuPa2GumwzFzn0zgePGhD7n3',
-            uploadUrl: 'https://35834.cke-cs.com/easyimage/upload/',
-            webSocketUrl: '35834.cke-cs.com/ws',
-            documentId: 'node-2'
-        },
-        toolbar: [ 'bold', 'italic', '|', 'undo', 'redo', '|', 'imageUpload', '|', 'alignment:right', 'alignment:left' ]
-    } ).then( 
+      if (jQuery('[data-editor-active-text-format=basic_html]:not([ckeditor-applied=1])').length > 0) {
+        // Prevent duplicated execution.
+        jQuery('[data-editor-active-text-format=basic_html]').attr('ckeditor-applied', 1);
+        // Create editor.
+        ClassicEditor.create(
+          document.querySelector('[data-editor-active-text-format=basic_html]'), 
+          {
+            plugins: [ Essentials, Paragraph, Bold, Italic, EasyImageUpload, Alignment ],
+            cloudServices: {
+                // From account in ckeditor.com
+                tokenUrl: 'https://35834.cke-cs.com/token/dev/rCIlirmnPfSErxaZFY8H53BZldrqsWi49ReQZuPa2GumwzFzn0zgePGhD7n3',
+                uploadUrl: 'https://35834.cke-cs.com/easyimage/upload/',
+                webSocketUrl: '35834.cke-cs.com/ws',
+                documentId: 'node-4'
+            },
+            toolbar: [ 'bold', 'italic', '|', 'undo', 'redo', '|', 'imageUpload', '|', 'alignment:right', 'alignment:left' ]
+          } 
+        ).then(
           editor => {
             console.log( editor );
           } 
         ).catch( 
-            error => {
-              console.error( error );
-            } 
-          );
+          error => {
+            console.error( error );
+          } 
+        );
+      }
+
 
     }
   };
