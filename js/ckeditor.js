@@ -47,8 +47,6 @@ import CollaborativeEditing from '@ckeditor/ckeditor5-collaboration/src/collabor
           } 
         );
       }
-
-
     }
   };
 })(jQuery, Drupal);
