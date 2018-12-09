@@ -4,3 +4,5 @@ d8ck5.cdn:
   css:
     state:
       css/ckeditor.css: {}
+  dependencies:
+    - core/jquery
