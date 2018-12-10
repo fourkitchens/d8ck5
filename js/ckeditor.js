@@ -6,7 +6,6 @@
 import ClassicEditor from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
-import EasyImageUpload from '@ckeditor/ckeditor5-easy-image/src/easyimage';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 // Basic Styles
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
@@ -30,7 +29,7 @@ import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar'
         ClassicEditor.create(
           document.querySelector('[data-editor-active-text-format=basic_html]'), 
           {
-            plugins: [ Essentials, Paragraph, Bold, Italic, Underline, Strikethrough, Code, EasyImageUpload, Alignment, BlockToolbar ],
+            plugins: [ Essentials, Paragraph, Bold, Italic, Underline, Strikethrough, Code, Alignment, BlockToolbar ],
             blockToolbar: [
               'bold', 'italic',
               '|',
@@ -43,7 +42,7 @@ import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar'
               webSocketUrl: '35834.cke-cs.com/ws',
               documentId: 'node-4'
             },
-            toolbar: [ 'bold', 'italic', 'underline', 'strikethrough', 'code', '|', 'undo', 'redo', '|', 'imageUpload', '|', 'alignment:right', 'alignment:left' ]
+            toolbar: [ 'bold', 'italic', 'underline', 'strikethrough', 'code', '|', 'undo', 'redo', '|', 'alignment:right', 'alignment:left' ]
           } 
         ).then(
           editor => {
