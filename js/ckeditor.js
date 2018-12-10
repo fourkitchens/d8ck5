@@ -21,6 +21,8 @@ import Font from '@ckeditor/ckeditor5-font/src/font';
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 // Highlight
 import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
+// Link
+import Link from '@ckeditor/ckeditor5-link/src/link';
 
 (function ($, Drupal) {
 
@@ -35,7 +37,7 @@ import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
         ClassicEditor.create(
           document.querySelector('[data-editor-active-text-format=basic_html]'), 
           {
-            plugins: [ Essentials, Paragraph, Bold, Italic, Underline, Strikethrough, Code, Alignment, BlockToolbar, Font, Heading, Highlight ],
+            plugins: [ Essentials, Paragraph, Bold, Italic, Underline, Strikethrough, Code, Alignment, BlockToolbar, Font, Heading, Highlight, Link ],
             blockToolbar: [
               'bold', 'italic',
               '|',
@@ -83,7 +85,7 @@ import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
                 }
               ]
             },
-            toolbar: [ 'heading', 'fontSize', 'fontFamily', '|', 'bold', 'italic', 'underline', 'strikethrough', 'code', '|', 'undo', 'redo', '|', 'alignment:right', 'alignment:left', '|', 'highlight' ]
+            toolbar: [ 'heading', 'fontSize', 'fontFamily', '|', 'bold', 'italic', 'underline', 'strikethrough', 'code', 'link', '|', 'undo', 'redo', '|', 'alignment:right', 'alignment:left', '|', 'highlight' ]
           } 
         ).then(
           editor => {

@@ -27,6 +27,7 @@
     "@ckeditor/ckeditor5-font": "^10.0.4",
     "@ckeditor/ckeditor5-heading": "^10.1.1",
     "@ckeditor/ckeditor5-highlight": "^10.0.4",
+    "@ckeditor/ckeditor5-link": "^10.1.0",
     "@ckeditor/ckeditor5-paragraph": "^10.0.3",
     "@ckeditor/ckeditor5-theme-lark": "^11.1.0",
     "@ckeditor/ckeditor5-ui": "^11.2.0",
