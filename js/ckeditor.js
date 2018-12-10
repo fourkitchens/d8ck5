@@ -19,6 +19,8 @@ import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar'
 import Font from '@ckeditor/ckeditor5-font/src/font';
 // Headings
 import Heading from '@ckeditor/ckeditor5-heading/src/heading';
+// Highlight
+import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight';
 
 (function ($, Drupal) {
 
@@ -33,7 +35,7 @@ import Heading from '@ckeditor/ckeditor5-heading/src/heading';
         ClassicEditor.create(
           document.querySelector('[data-editor-active-text-format=basic_html]'), 
           {
-            plugins: [ Essentials, Paragraph, Bold, Italic, Underline, Strikethrough, Code, Alignment, BlockToolbar, Font, Heading ],
+            plugins: [ Essentials, Paragraph, Bold, Italic, Underline, Strikethrough, Code, Alignment, BlockToolbar, Font, Heading, Highlight ],
             blockToolbar: [
               'bold', 'italic',
               '|',
@@ -56,7 +58,32 @@ import Heading from '@ckeditor/ckeditor5-heading/src/heading';
                 'Ubuntu Mono, Courier New, Courier, monospace'
               ]
             },
-            toolbar: [ 'heading', 'fontSize', 'fontFamily', '|', 'bold', 'italic', 'underline', 'strikethrough', 'code', '|', 'undo', 'redo', '|', 'alignment:right', 'alignment:left' ]
+            highlight: {
+              options: [
+                {
+                  model: 'greenMarker',
+                  class: 'marker-green',
+                  title: 'Green marker',
+                  color: 'rgb(25, 156, 25)',
+                  type: 'marker'
+                },
+                {
+                  model: 'yellowMarker',
+                  class: 'marker-yellow',
+                  title: 'Yellow marker',
+                  color: '#cac407',
+                  type: 'marker'
+                },
+                {
+                  model: 'redPen',
+                  class: 'pen-red',
+                  title: 'Red pen',
+                  color: 'hsl(343, 82%, 58%)',
+                  type: 'pen'
+                }
+              ]
+            },
+            toolbar: [ 'heading', 'fontSize', 'fontFamily', '|', 'bold', 'italic', 'underline', 'strikethrough', 'code', '|', 'undo', 'redo', '|', 'alignment:right', 'alignment:left', '|', 'highlight' ]
           } 
         ).then(
           editor => {
