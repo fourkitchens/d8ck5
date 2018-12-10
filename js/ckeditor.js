@@ -14,6 +14,8 @@ import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
 import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
+// Block toolbar
+import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar';
 
 (function ($, Drupal) {
 
@@ -28,13 +30,18 @@ import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
         ClassicEditor.create(
           document.querySelector('[data-editor-active-text-format=basic_html]'), 
           {
-            plugins: [ Essentials, Paragraph, Bold, Italic, Underline, Strikethrough, Code, EasyImageUpload, Alignment ],
+            plugins: [ Essentials, Paragraph, Bold, Italic, Underline, Strikethrough, Code, EasyImageUpload, Alignment, BlockToolbar ],
+            blockToolbar: [
+              'bold', 'italic',
+              '|',
+              'underline', 'strikethrough', 'code'
+            ],            
             cloudServices: {
-                // From account in ckeditor.com
-                tokenUrl: 'https://35834.cke-cs.com/token/dev/rCIlirmnPfSErxaZFY8H53BZldrqsWi49ReQZuPa2GumwzFzn0zgePGhD7n3',
-                uploadUrl: 'https://35834.cke-cs.com/easyimage/upload/',
-                webSocketUrl: '35834.cke-cs.com/ws',
-                documentId: 'node-4'
+              // From account in ckeditor.com
+              tokenUrl: 'https://35834.cke-cs.com/token/dev/rCIlirmnPfSErxaZFY8H53BZldrqsWi49ReQZuPa2GumwzFzn0zgePGhD7n3',
+              uploadUrl: 'https://35834.cke-cs.com/easyimage/upload/',
+              webSocketUrl: '35834.cke-cs.com/ws',
+              documentId: 'node-4'
             },
             toolbar: [ 'bold', 'italic', 'underline', 'strikethrough', 'code', '|', 'undo', 'redo', '|', 'imageUpload', '|', 'alignment:right', 'alignment:left' ]
           } 

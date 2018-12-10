@@ -1,3 +1,7 @@
 .ck-editor__editable {
   min-height: 200px;
 }
+
+.ck.ck-block-toolbar-button {
+    transform: translateX( -10px );
+}
