@@ -17,6 +17,8 @@ import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
 import BlockToolbar from '@ckeditor/ckeditor5-ui/src/toolbar/block/blocktoolbar';
 // Fonts
 import Font from '@ckeditor/ckeditor5-font/src/font';
+// Headings
+import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 
 (function ($, Drupal) {
 
@@ -31,7 +33,7 @@ import Font from '@ckeditor/ckeditor5-font/src/font';
         ClassicEditor.create(
           document.querySelector('[data-editor-active-text-format=basic_html]'), 
           {
-            plugins: [ Essentials, Paragraph, Bold, Italic, Underline, Strikethrough, Code, Alignment, BlockToolbar, Font ],
+            plugins: [ Essentials, Paragraph, Bold, Italic, Underline, Strikethrough, Code, Alignment, BlockToolbar, Font, Heading ],
             blockToolbar: [
               'bold', 'italic',
               '|',
@@ -49,12 +51,12 @@ import Font from '@ckeditor/ckeditor5-font/src/font';
             },
             fontFamily: {
               options: [
-                  'default',
-                  'Ubuntu, Arial, sans-serif',
-                  'Ubuntu Mono, Courier New, Courier, monospace'
+                'default',
+                'Ubuntu, Arial, sans-serif',
+                'Ubuntu Mono, Courier New, Courier, monospace'
               ]
             },
-            toolbar: [ 'fontSize', 'fontFamily', '|', 'bold', 'italic', 'underline', 'strikethrough', 'code', '|', 'undo', 'redo', '|', 'alignment:right', 'alignment:left' ]
+            toolbar: [ 'heading', 'fontSize', 'fontFamily', '|', 'bold', 'italic', 'underline', 'strikethrough', 'code', '|', 'undo', 'redo', '|', 'alignment:right', 'alignment:left' ]
           } 
         ).then(
           editor => {
